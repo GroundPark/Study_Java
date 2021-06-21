@@ -1,0 +1,22 @@
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class standardIO7 {
+
+	public static void main(String[] args) {
+		// TODO 시간, 파일크기(length), 이름을 오름차나 내림차로 정렬하여 파일의 속성을 출력하는 예제
+		
+		if(args.length != 1 || args[0].length() != 1 || "tTlLnN".indexOf(args[0]) == -1) {
+			// 하나의 args인지, 문자열 args 길이가 1 인지, 문자열이 tTlLnN 중 하나를 가졌는지 검사하고... 충족하지않으면 사용법 출력
+			System.out.println(" usage : java standardIO7 ");
+		}
+		
+	    String currentDir = System.getProperty("user.dir");
+		File dir = new File(currentDir);
+	  // 현재 디렉토리에 대해 불러옴. 그냥 디렉토리쓰고 싶으면 윗줄 빼고 File에 경로 쓰셈	
+		File [] files = dir.listFiles();
+		
+	}
+
+}

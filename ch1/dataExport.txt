@@ -1,0 +1,6 @@
+#Data Exported
+#Wed May 19 03:46:23 KST 2021
+capacity=10
+size=65536
+timeout=20
+language=EUC-KR

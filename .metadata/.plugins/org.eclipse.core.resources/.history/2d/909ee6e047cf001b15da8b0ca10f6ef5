@@ -1,0 +1,11 @@
+class temp1 {
+	public static void main(String args[]) {
+		String fileName = "0000001";
+		String newfileName = "0000001";
+		       newfileName = newfileName.substring(5 - 7);
+			   // 파일명 앞에 0000을 붙이고... 
+		//list[i].renameTo(new File(dir, newfileName));
+		//System.out.println(newfileName.length());
+		System.out.println(fileName +"에서 " +newfileName+"으로 이름 변환 완료");
+	}
+}

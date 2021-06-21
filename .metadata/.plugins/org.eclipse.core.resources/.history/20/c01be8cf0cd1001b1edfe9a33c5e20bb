@@ -1,0 +1,50 @@
+import java.io.*;
+public class standardIO12_1 {
+
+	public static void main(String[] args) {
+		// TODO 나눈 파일을 다시 합치는 예제
+		
+		
+		if(args.length != 1) {
+			System.out.println(" usage : filename ");
+			System.exit(0);
+		}
+		
+		String mergeFilename = args[0];
+		
+		try {
+			File tmpFile = File.createTempFile("~mergetmp", ".tmp");
+			tmpFile.deleteOnExit();
+			
+			FileOutputStream FoutputS = new FileOutputStream(tmpFile);
+			BufferedOutputStream BoutputS = new BufferedOutputStream(FoutputS);
+			
+			BufferedInputStream BinputS = null;
+			
+			int num = 1;
+			File f = new File(mergeFilename + "_." + num);
+			
+			while(f.exists()) {
+				f.setReadOnly();
+				BinputS = new BufferedInputStream(new FileInputStream(f));
+				
+				int data = 0;
+				while( (data=BinputS.read()) != -1){
+					BoutputS.write(data);
+				}
+				
+				BinputS.close();
+				
+				File oldFile = new File(mergeFilename);
+				if(oldFile.exists())
+					oldFile.delete();
+				tmpFile.renameTo(oldFile);
+			}
+			
+			
+			BoutputS.close();
+			
+		}catch(IOException e) { e.printStackTrace(); }
+	}
+
+}

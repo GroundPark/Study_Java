@@ -1,0 +1,9 @@
+
+public class Serial1 {
+
+	public static void main(String[] args) {
+		// TODO Serialization(직렬화) : 객체를 데이터 스트림으로 만듬
+
+	}
+
+}

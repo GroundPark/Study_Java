@@ -1,0 +1,9 @@
+import java.io.*;
+public class standartIO10 {
+
+	public static void main(String[] args) {
+		// TODO [지정 디렉토리] 이하의 파일 중 [지정 확장자]를 가진 파일을 삭제하는 예제
+
+	}
+
+}

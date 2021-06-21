@@ -1,0 +1,11 @@
+class temp1 {
+	public static void main(String args[]) {
+		int i = 0;
+		final int VOLUME = 1000;
+		
+		if( i % VOLUME == 0) {
+			if( i != 0) {
+				System.out.println("되냐고");
+			}
+	}
+}
