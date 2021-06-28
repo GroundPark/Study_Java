@@ -1,0 +1,30 @@
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.text.SimpleDateFormat;
+
+public class Network6_udp_server {
+	// TODO 서버에서 서버시간을 전송받아 클라에서 출력하는 간단 UDP 예제  
+	public void start() throws IOException {		//datagramSocket
+		DatagramSocket dSkt = new DatagramSocket(7777);
+		DatagramPacket inPacket, outPacket;
+		
+		byte [] inMsg = new byte[10];
+		byte [] outMsg;
+		
+		while(true) {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO TCP/IP에서 Socket, ServerSocket 사용했다면... UDP는 DatagramSocket(소켓), DatagramPacket(데이터)을 사용함
+		// DatagramPacket은 헤더(받는 호스트의 주소/포트)+데이터로 구성되어있음
+		// DatagramPacket에 적힌 주소(포트)로 가면 DatagramSocket에 도착한다 생각
+		try {
+			new Network6_udp_server().start();
+		}catch(Exception e) { e.printStackTrace(); }
+		
+	}
+
+}

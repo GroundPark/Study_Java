@@ -1,9 +1,0 @@
-import java.io.*;
-public class standardIO11 {
-
-	public static void main(String[] args) {
-		// TODO renameTo()를 이용해 파일명을 바꾸는 예제 
-
-	}
-
-}

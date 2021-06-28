@@ -1,9 +1,0 @@
-import java.io.*;
-public class standardIO6 {
-
-	public static void main(String[] args) {
-		// TODO 지정 디렉토리에 포함된 파일, 디렉토리 목록을 출력하는 예제
-		
-	}
-
-}

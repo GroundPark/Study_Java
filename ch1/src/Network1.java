@@ -17,17 +17,40 @@ public class Network1 {
 		 * > 구축, 관리 비용 절감 / 자원 활용 극대화 || 보안 취약, 자원 관리 어려움
 		 */
 		
+		
+		
+		
 		// TODO InetAddress 메서드를 활용해 IP주소를 다루는 예제
 		
 		InetAddress ip = null;
 		InetAddress [] ipArr = null;
 		
 		try {
-			ip = InetAddress.getByName("www.naver.com");
+			ip = InetAddress.getByName("www.google.com");
 			System.out.println("getHostName() : " +ip.getHostName());
 			System.out.println("getHostAddress() : " +ip.getHostAddress());
+			
+			byte [] ipAddr = ip.getAddress();
+			System.out.println("getAddress() : " +Arrays.toString(ipAddr));
+			System.out.println("///////////////////////");
 		}catch(UnknownHostException e) { e.printStackTrace(); }
 		
+		try {
+			ip = InetAddress.getLocalHost();
+			System.out.println("getHostName : " +ip.getHostName());
+			System.out.println("getHostAddress : " +ip.getHostAddress());
+			System.out.println("///////////////////////");
+		}catch(UnknownHostException e) { e.printStackTrace(); }
+		
+		
+		try {
+			ipArr = InetAddress.getAllByName("www.naver.com");
+			
+			for(int i=0;i<ipArr.length;i++) {
+				System.out.println("ipArr[" +i +"] : " +ipArr[i]);
+			}
+		}catch(UnknownHostException e) { e.printStackTrace(); }
+		// 하나의 도메인명에 여러 IP주소가 맵핑될 수도 있기에 (반대도) getAllByName()으로 모든 IP 주소 얻음
 	}
 
 }

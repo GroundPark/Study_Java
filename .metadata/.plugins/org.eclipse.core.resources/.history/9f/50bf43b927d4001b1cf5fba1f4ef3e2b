@@ -1,0 +1,12 @@
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Network4_Server {
+
+	public static void main(String[] args) {
+		// TODO TCP/IP 1:1 채팅 server. socket으로 데이터 송수신하는 작업을 각각 Sender, Receiver가 처리하도록 하여 송수신이 동시에 이루어짐
+
+	}
+
+}

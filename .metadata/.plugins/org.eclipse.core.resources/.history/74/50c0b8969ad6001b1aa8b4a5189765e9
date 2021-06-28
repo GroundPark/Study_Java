@@ -1,0 +1,13 @@
+import java.io.*;
+import java.net.*;
+
+public class Network6_udp_client {
+	DatagramSocket dSkt = new DatagramSocket();
+	InetAddress serverAddress = InetAddress.getByName("127.0.0.1");
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

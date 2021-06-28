@@ -1,9 +1,0 @@
-
-public class _userInfo implements java.io.Serializable {
-
-	public static void main(String[] args) {
-		// TODO Serial1 에서 사용하기 위해 만든 클래스 (컴파일 선행 필요!)
-
-	}
-
-}

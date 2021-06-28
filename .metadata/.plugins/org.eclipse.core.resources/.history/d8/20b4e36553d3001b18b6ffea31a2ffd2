@@ -1,0 +1,26 @@
+import java.io.*;
+import java.net.*;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class Network3 {
+
+	public static void main(String[] args) {
+		// TODO socket : 프로세스간의 통신에 사용되는 양쪽 끝단(endpoint)
+		
+		ServerSocket serverSkt = null;
+		
+		try {
+			serverSkt = new ServerSocket(7777);
+			System.out.println(getTime() +" server is ready ");
+		}catch(IOException e) { e.printStackTrace(); }
+		
+	}
+
+	private static String getTime() {
+		// TODO 현재시간을 문자열로 반환
+		SimpleDateFormat sdf = new SimpleDateFormat("[hh:mm:ss]");
+		return sdf.format(new Date());
+	}
+
+}

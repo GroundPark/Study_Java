@@ -1,9 +1,0 @@
-
-public class Serial1 {
-
-	public static void main(String[] args) {
-		// TODO Serialization(직렬화) : 객체의 저장된 데이터를 스트림에 write 하기위해 serial 데이터로 변환하는것
-
-	}
-
-}
