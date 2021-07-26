@@ -8,15 +8,15 @@ public class instanceOf1 {
 		father f = new father();
 		
 		if(f instanceof father) {
-			System.out.println("f instanceof father가 T임");
+			System.out.println("f instanceof father : T");
 		}
 		
 		if(f instanceof grandFather) {
-			System.out.println("f instanceof grandFather가 T임");
+			System.out.println("f instanceof grandFather : T");
 		}
 		
 		if(f instanceof Object) {
-			System.out.println("f instanceof Object가 T임");
+			System.out.println("f instanceof Object : T");
 		}
 	}
 

@@ -3,7 +3,6 @@ package com.javaStudy;
 public class Extends2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Point3D p = new Point3D();
 		System.out.printf("p3의 x=%d, y=%d, z=%d",p.x,p.y,p.z);
 	}

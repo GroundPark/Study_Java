@@ -1429,3 +1429,231 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-06-29 20:18:02.222 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-06-29 20:18:52.247
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2021-06-29 20:52:39.822
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@4805069b)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@17f192fb)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPartContext
+!STACK 0
+java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@4805069b),  for 'org.eclipse.ui.navigate.backwardHistory',  in TrimmedWindowImpl (IDEWindow) Context, activeWhen=AndExpression [children=[ActiveShellExpression(Shell {Study_Java - D:\devTool_only\apache-maven-3.8.1\conf\settings.xml - Eclipse IDE}), WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@60194904)]], active=true, sourcePriority=17408, participating=true]} vs {[ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@17f192fb),  for 'org.eclipse.ui.navigate.backwardHistory',  in WorkbenchContext, activeWhen=ActiveShellExpression(Shell {Preferences}), active=true, sourcePriority=17408, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPartContext
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
+	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:271)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:282)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:282)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:114)
+	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
+	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
+	at org.eclipse.jface.action.Action.setEnabled(Action.java:541)
+	at org.eclipse.ui.internal.NavigationHistoryAction.update(NavigationHistoryAction.java:251)
+	at org.eclipse.ui.internal.NavigationHistory.updateActions(NavigationHistory.java:416)
+	at org.eclipse.ui.internal.NavigationHistory.addEntry(NavigationHistory.java:372)
+	at org.eclipse.ui.internal.NavigationHistory.lambda$0(NavigationHistory.java:209)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:579)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:413)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3922)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3524)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+!SESSION 2021-06-29 21:00:07.607 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-06-29 21:00:18.778
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-06-30 18:25:49.909 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-06-30 18:26:38.076
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-06-30 23:09:05.232 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-06-30 23:11:55.219
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-07-06 18:21:08.203 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-06 18:22:09.358
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-07-06 22:05:01.580 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-06 22:05:13.242
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-07-09 17:32:13.649 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-09 17:32:48.713
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.workbench 4 2 2021-07-09 17:32:54.470
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.IllegalStateException: The profile is currently in use.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfileStateProperties(SimpleProfileRegistry.java:1170)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileStateProperties(SimpleProfileRegistry.java:1160)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.isFirstTimeRunningThisSharedInstance(MigrationSupport.java:148)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.performMigration(MigrationSupport.java:62)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:82)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2719)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 4 0 2021-07-09 17:32:54.471
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'org.eclipse.equinox.p2.ui.sdk.scheduler' plug-in.
+!STACK 0
+java.lang.IllegalStateException: The profile is currently in use.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfileStateProperties(SimpleProfileRegistry.java:1170)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileStateProperties(SimpleProfileRegistry.java:1160)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.isFirstTimeRunningThisSharedInstance(MigrationSupport.java:148)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.performMigration(MigrationSupport.java:62)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:82)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2719)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2021-07-09 18:30:22.689
+!MESSAGE Profile D__java-2020-03_eclipse is not current. Expected timestamp 0 but was 0.
+!STACK 0
+java.lang.IllegalStateException: Profile D__java-2020-03_eclipse is not current. Expected timestamp 0 but was 0.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.lockProfile(SimpleProfileRegistry.java:861)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:72)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.internal.provisional.p2.director.PlanExecutionHelper.executePlan(PlanExecutionHelper.java:46)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl$3.commit(ProfileTransactionImpl.java:546)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl.commit(ProfileTransactionImpl.java:342)
+	at org.eclipse.oomph.setup.p2.impl.P2TaskImpl.perform(P2TaskImpl.java:903)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.doPerformNeededSetupTasks(SetupTaskPerformer.java:3827)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.access$1(SetupTaskPerformer.java:3770)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil$1.run(SetupTaskPerformer.java:5136)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil.performNeededSetupTasks(SetupTaskPerformer.java:5130)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil.access$0(SetupTaskPerformer.java:5128)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.performNeededSetupTasks(SetupTaskPerformer.java:3761)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.performTriggeredSetupTasks(SetupTaskPerformer.java:3736)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.perform(SetupTaskPerformer.java:3629)
+	at org.eclipse.oomph.setup.ui.wizards.ProgressPage$9.run(ProgressPage.java:585)
+	at org.eclipse.oomph.setup.ui.wizards.ProgressPage$11$1.run(ProgressPage.java:711)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2021-07-09 18:30:22.744
+!MESSAGE Setup tasks were performed during startup. See 'D:\java-2020-03\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+!SESSION 2021-07-26 17:31:55.106 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-26 17:32:06.107
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
